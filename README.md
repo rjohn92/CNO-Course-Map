@@ -9,7 +9,7 @@ Logical sequencing, clear prerequisites, and practical overlap where it *acceler
 
 ---
 
-## 🚦 Phase 1: C Programming Fundamentals (Weeks 1–12)
+## 🚦 [Phase 1: C Programming Fundamentals](https://github.com/rjohn92/Learning-C) (Weeks 1–12)
 **Purpose:** Build strong language fundamentals and mental models for memory, pointers, and bugs.
 
 - **Weeks 1–12:**  
@@ -29,7 +29,7 @@ A small C app with both intended bugs (buffer overflow, etc.) and a write-up map
 
 ---
 
-## 🚦 Phase 2: Systems Programming (Weeks 13–24)
+## 🚦 [Phase 2: Systems Programming](https://github.com/rjohn92/Systems-Programming) (Weeks 13–24)
 **Purpose:** Use C to interact with the operating system directly — processes, memory, files, signals, threads, and *intro to sockets*.
 
 - **Weeks 13–24:**  
@@ -48,7 +48,7 @@ A mini shell (with basic job control) or a syscall-heavy tool, with binary analy
 
 ---
 
-## 🚦 Phase 3: Network Programming (Weeks 21–30) *(CAN OVERLAP with late Systems Prog!)*
+## 🚦 [Phase 3: Network Programming](https://github.com/rjohn92/Network-Programming) (Weeks 21–30) *(CAN OVERLAP with late Systems Prog!)*
 **Purpose:** Specialize in writing secure, robust, and CNO-relevant network code.
 
 - **Weeks 21–30:**  
@@ -83,7 +83,7 @@ Trace and document a privilege escalation exploit, or add a syscall to a toy OS 
 
 ---
 
-## 🚦 x86 Assembly and Reverse Engineering Fundamentals (Weeks 16–28, integrated/parallel)
+## 🚦 [x86 Assembly and Reverse Engineering Fundamentals] (Weeks 16–28, integrated/parallel)
 **Purpose:**  
 Build foundational binary analysis skills, RE, and understand how C compiles to machine code for exploitation.
 
@@ -101,7 +101,7 @@ Build foundational binary analysis skills, RE, and understand how C compiles to 
 
 ---
 
-## 🚦 Python for CNO and RE (Weeks 8–44, continuous integration)
+## 🚦 [Python for CNO and RE](https://github.com/rjohn92/Python-for-CNO) (Weeks 8–44, continuous integration)
 **Purpose:**  
 Rapid scripting, automation, and tooling for CNO workflows, including binary parsing, RE scripting, and toolchain integration.
 
