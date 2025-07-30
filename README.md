@@ -1,4 +1,4 @@
-# 🧭 CNO Track: Full Learning Roadmap  
+# 🗺️ CNO Track: Full Learning Roadmap  
 **With x86 Assembly & Python for CNO/RE**
 
 **Goal:**  
