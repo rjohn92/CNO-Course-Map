@@ -1,7 +1,9 @@
-# 🧭 CNO Track: Four-Course Learning Roadmap
+# 🧭 CNO Track: Full Learning Roadmap  
+**With x86 Assembly & Python for CNO/RE**
 
 **Goal:**  
-Move from “barely write C” → “can write, exploit, and analyze real-world CNO tooling and malware”  
+Move from “barely write C” → “can write, exploit, and analyze real-world CNO tooling and malware”
+
 **Approach:**  
 Logical sequencing, clear prerequisites, and practical overlap where it *accelerates* skill-building (not just adding workload).
 
@@ -81,53 +83,84 @@ Trace and document a privilege escalation exploit, or add a syscall to a toy OS 
 
 ---
 
-## 🏗️ Overlap and Integration Guide
+## 🚦 x86 Assembly and Reverse Engineering Fundamentals (Weeks 16–28, integrated/parallel)
+**Purpose:**  
+Build foundational binary analysis skills, RE, and understand how C compiles to machine code for exploitation.
 
-### What can/should overlap?
+**Recommended Overlap:**  
+- Begin after solidifying C syntax and pointers (around Week 16).
+- Integrate with Systems/Networking: Use C programs as RE targets; analyze binaries you’ve built in other phases.
+- Not an isolated block: Blend weekly assembly/RE labs into the latter half of C and throughout Systems Programming.
 
-- **C Programming → Systems Programming:**  
-  - *No overlap at first* — finish C through pointers, memory, and structs before starting Systems Programming.
-  - Start Systems Programming in **week 13**, once you’re comfortable writing non-trivial C code.
-
-- **Systems Programming ↔ Network Programming:**  
-  - *YES, overlap is recommended (not required):*  
-    - **Weeks 21–24:** You’re finishing Systems Programming, and Network Programming starts.  
-    - You should be comfortable with threads, signals, and syscalls before deep-diving into multiplexed or secure network code.
-    - *Do both if you want to accelerate learning; otherwise, back-to-back is fine.*
-
-- **Operating Systems:**  
-  - *Should come last* (after Systems/Network), as it relies on you understanding how to *use* system features first.
-  - Can begin capstone OS readings/projects during late Network Programming if you want a head start.
+**Topics:**  
+- x86 instruction set, registers, stack/heap layout  
+- Compilation: C → asm → machine code  
+- Basic disassembly (objdump, gdb, Ghidra walkthroughs)  
+- Reverse engineering control flow and data  
+- Lab: Map source lines to assembly, RE simple binaries, basic exploit dev
 
 ---
 
-## 📅 Visual Sequence
+## 🚦 Python for CNO and RE (Weeks 8–44, continuous integration)
+**Purpose:**  
+Rapid scripting, automation, and tooling for CNO workflows, including binary parsing, RE scripting, and toolchain integration.
 
-| Weeks      | C Programming | Systems Programming | Network Programming | Operating Systems |
-|------------|---------------|---------------------|--------------------|------------------|
-| 1–12       | 🟩 Core       |                     |                    |                  |
-| 13–20      | (review/adv)  | 🟩 Core             |                    |                  |
-| 21–24      |               | 🟩 Final Labs       | 🟨 Start           |                  |
-| 25–30      |               |                     | 🟩 Core            |                  |
-| 31–44      |               |                     |                    | 🟩 Core          |
+**Recommended Overlap:**  
+- Begin during late C (Week 8+): After you’re comfortable with basic programming, start the Python track alongside Systems Programming.
+- Continue through Network/OS: Use Python for scripting labs, automating testing, and building RE/analysis tools throughout the rest of the program.
+- Apply in every phase: Labs and capstones should increasingly leverage Python for automation, proof-of-concept exploits, and tool integration.
+
+**Topics:**  
+- Python scripting for automation, file/binary manipulation  
+- Subprocess management, tool chaining  
+- Network scripting (client/server, protocol fuzzers)  
+- pyelftools, pefile, pwntools, scapy  
+- Ghidra/IDA scripting (applied in capstone RE labs)  
+- Integrate with CNO workflows as a “glue language”
+
+---
+
+## 🗂️ Updated Roadmap Summary Table
+
+| Phase                 | Weeks    | Pre-reqs         | Focus                   | Can Overlap With           |
+|-----------------------|----------|------------------|-------------------------|----------------------------|
+| C Programming         | 1–12     | None             | Language, memory        | Python (8–12)              |
+| Systems Prog.         | 13–24    | C basics         | Syscalls, OS API        | Assembly (16–24), Python   |
+| Network Prog.         | 21–30    | C, syscalls      | Sockets, protocols      | Assembly (21–28), Python   |
+| Operating Systems     | 31–44    | All above        | OS internals            | Python, late Assembly      |
+| **x86 Assembly/RE**   | 16–28*   | C pointers       | Disassembly, RE basics  | Systems, Network Prog.     |
+| **Python for CNO/RE** | 8–44**   | C basics         | Automation, scripting   | ALL phases (parallel)      |
+
+- *Assembly/RE: Start ~Week 16, continue in parallel as needed*
+- **Python: Start ~Week 8, continuous integration with labs and capstones**
+
+---
+
+## 📅 Visual Overlap Sequence
+
+| Weeks      | C Prog | Sys Prog | Net Prog | OS      | Assembly/RE | Python         |
+|------------|--------|----------|----------|---------|-------------|----------------|
+| 1–7        | 🟩     |          |          |         |             |                |
+| 8–12       | 🟩     |          |          |         |             | 🟨 *(begin)*    |
+| 13–15      | (adv)  | 🟩       |          |         |             | 🟩             |
+| 16–20      |        | 🟩       |          |         | 🟨 *(begin)* | 🟩             |
+| 21–24      |        | 🟩       | 🟩       |         | 🟩           | 🟩             |
+| 25–28      |        |          | 🟩       |         | 🟩           | 🟩             |
+| 29–30      |        |          | 🟩       |         | (wrap up)    | 🟩             |
+| 31–44      |        |          |          | 🟩      | (apply in OS)| 🟩             |
 
 🟩 = Primary focus  
-🟨 = Optional overlap (if workload manageable)
+🟨 = Begin/Overlap
 
 ---
 
-## 🗂️ Roadmap Summary Table
+## Integration Guidance
 
-| Phase             | Weeks    | Pre-reqs         | Focus                | Can Overlap With      |
-|-------------------|----------|------------------|----------------------|-----------------------|
-| C Programming     | 1–12     | None             | Language, memory     | —                     |
-| Systems Prog.     | 13–24    | C basics         | Syscalls, OS API     | Network Prog. (21–24) |
-| Network Prog.     | 21–30    | C, basic syscalls| Sockets, protocols   | Late Systems Prog.    |
-| Operating Systems | 31–44    | All above        | OS internals         | Late Network Prog.    |
+- Labs and capstones in Systems, Networking, and OS should *require* or *encourage* use of both Python and Assembly tooling for automation and analysis.
+- Weekly or biweekly “integration checkpoints”: document how Python or Assembly tooling advanced or accelerated your understanding or workflow.
 
 ---
 
-## 🎯 Final Advice
 
 - **Do NOT try to learn all four in parallel.**  
   - *C Programming* must come first (don’t start systems/networking without pointer confidence).
